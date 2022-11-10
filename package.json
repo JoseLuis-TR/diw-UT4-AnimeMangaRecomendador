@@ -1,0 +1,17 @@
+{
+  "name": "tema4-maquetacion",
+  "source": "src/index.html",
+  "scripts": {
+    "parcel:start": "parcel",
+    "parcel:build": "parcel build",
+    "clean" : "rimraf dist .cache .cache-loader",
+    "start" : "npm-run clean parcel:start",
+    "build" : "npm-run clean parcel:build"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.7.0",
+    "npm-run": "^5.0.1",
+    "parcel": "^2.7.0",
+    "rimraf": "^3.0.2"
+  }
+}

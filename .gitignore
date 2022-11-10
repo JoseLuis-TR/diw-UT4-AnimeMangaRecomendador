@@ -1,0 +1,5 @@
+# Ignoramos los archivos creados por node
+node_modules/
+
+# Ignoramos la cache de parcel
+.*/
