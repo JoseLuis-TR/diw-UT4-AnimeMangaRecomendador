@@ -12,8 +12,8 @@ body {
     color: variable.$primary-color;
     image: url("../images/wave.png");
     repeat: no-repeat;
-    position: center;
-    position: top;
+    position: top center;
+    size: 100% auto;
   }
 }
 
