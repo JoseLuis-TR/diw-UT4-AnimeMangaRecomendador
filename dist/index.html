@@ -2,34 +2,38 @@
 <html lang="es">
     <head>
         <title>AMR</title>
-        <link rel="stylesheet" href="/index.034b6250.css">
+        <link rel="stylesheet" href="/index.80b9a6aa.css">
+        <link rel="stylesheet" href="/index.dbe073f0.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Urbanist">
     </head>
     <body>
-        <section class="wave-container"></section>
+        <article class="wave-container"></article>
         <header class="header">
             <a href="">
                 <img class="header__menu" src="/menu.b0823765.png">
             </a>
-            <h1>¿Qué deseas ver hoy?</h1>
+            <h1 class="header__titulo">¿Qué deseas ver hoy?</h1>
             <a href="/index.html">
-                <img class="header__image" alt="logo AML" src="/logoAML2.7d65e81b.png">
+                <img class="header__logo" alt="logo AML" src="/logoAML2.7d65e81b.png">
             </a>
         </header>
         <main>
-            <section>
-                <h2>Descubre tu nuevo anime o manga favorito gracias a AMR.</h2>
-                <form class="busqueda">
-                    <label for="genero">Género</label>
-                    <select name="genero" id="genero">
+            <article class="centro">
+                <h2 class="centro__frase">Descubre tu nuevo anime o manga favorito gracias a AMR.</h2>
+                <form class="centro__busqueda">
+                    <fieldset class="centro__busqueda--opcion">
+                        <label for="genero">Género</label>
+                        <select name="genero" id="genero">
                         <option value="accion">Acción</option>
                         <option value="aventuras">Aventuras</option>
                         <option value="comedia">Comedia</option>
                         <option value="drama">Drama</option>
                         <option value="fantasia">Fantasía</option>
-                    </select>
-                    <label for="decada">Década</label>
-                    <select name="decada" id="decada">
+                        </select>
+                    </fieldset>
+                    <fieldset class="centro__busqueda--opcion">
+                        <label for="decada">Década</label>
+                        <select name="decada" id="decada">
                         <option value="2020s">2020s</option>
                         <option value="2010s">2010s</option>
                         <option value="2000s">2000s</option>
@@ -37,25 +41,30 @@
                         <option value="80s">80s</option>
                         <option value="70s">70s</option>
                         <option value="60s">60s</option>
-                    </select>
-                    <label for="notaMedia">Nota media</label>
-                    <select name="notaMedia" id="notaMedia">
+                        </select>
+                    </fieldset>
+                    <fieldset class="centro__busqueda--opcion">
+                        <label for="notaMedia">Nota media</label>
+                        <select name="notaMedia" id="notaMedia">
                         <option value="9mas">90%</option>
                         <option value="8mas">80%</option>
                         <option value="7mas">70%</option>
                         <option value="6mas">60%</option>
                         <option value="5menos">50% o menos</option>
-                    </select>
-                    <input type="button" value="Buscar">
+                        </select>
+                    </fieldset>
+                    <a href="/searchResult.html">
+                        <input class="centro__busqueda--boton" type="button" value="Buscar">
+                    </a>
                 </form>
-            </section>
-            <section>
+            </article>
+            <article class="chooser">
                 <p>Anime</p>
                 <label class="switch">
-                    <input type="checkbox">
+                    <input type="checkbox" id="switch">
                     <span class="slider round"></span>
-                  </label>
-            </section>
+                </label>
+            </article>
         </main>
     <script src="/proyectoMaquetacion.59712999.js"></script></body>
 </html>
