@@ -2,8 +2,7 @@
 <html lang="es">
     <head>
         <title>AMR</title>
-        <link rel="stylesheet" href="assets/sass/header.scss">
-        <link rel="stylesheet" href="assets/sass/index.scss">
+        <link rel="stylesheet" href="assets/sass/main.scss">
         <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Urbanist">
     </head>
@@ -13,11 +12,19 @@
             <a href="">
                 <img class="header__menu" src="assets/images/menu.png">
             </a>
-            <h1 class="header__titulo">¿Qué deseas ver hoy?</h1>
+            <h1 id="header__titulo" class="header__titulo"></h1>
             <a href="index.html">
                 <img class="header__logo" alt="logo AML" src="assets/images/logoAML2.png">
             </a>
         </header>
+        <section class="sidebar" id="sidebar">
+            <ul>
+                <li>Hey</li>
+                <li>Hey</li>
+                <li>Hey</li>
+                <li>Hey</li>
+            </ul>
+        </section>
         <main>
             <article class="centro">
                 <h2 class="centro__frase">Descubre tu nuevo anime o manga favorito gracias a AMR.</h2>
@@ -54,18 +61,18 @@
                         <option value="5menos">50% o menos</option>
                         </select>
                     </fieldset>
-                    <a href="searchResult.html">
-                        <input class="centro__busqueda--boton" type="button" value="Buscar" />
-                    </a>
                 </form>
+                <a href="searchResult.html">
+                    <input class="centro__botonBusqueda" type="button" value="Buscar" />
+                </a>
             </article>
             <article class="chooser">
-                <p>Anime</p>
-                <label class="switch">
-                    <input type="checkbox" id="switch">
-                    <span class="slider round"></span>
-                </label>
+                <p id="chooser__titulo" class="chooser__titulo">Anime</p>
+                <input type="checkbox" id="check" class="chooser__check"/>
+                <label for="check" class="chooser__label"></label>
             </article>
         </main>
+
     </body>
+    <script src="/src/assets/js/checkIndex.js"></script>
 </html>

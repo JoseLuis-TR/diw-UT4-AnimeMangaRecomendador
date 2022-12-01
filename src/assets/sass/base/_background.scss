@@ -1,0 +1,9 @@
+@use '../utilities/variables' as variable;
+
+body {
+  background-color: variable.$primary-color;
+  background-image: url('/src/assets/images/wave.png');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100% auto;
+}

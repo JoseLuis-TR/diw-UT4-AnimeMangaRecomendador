@@ -1,10 +1,26 @@
-@use 'variables' as variable;
+@use '../utilities/variables' as variable;
+
+// TODO Retocar los botones de busqueda
 
 .centro {
     display: flex;
     flex-flow: column;
     align-items: center;
-    max-width: 60%;
+    width: 90%;
+
+    .centro__botonBusqueda {
+
+        height: 40px;
+        width: 170px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        background-color: variable.$button-color;
+        border: 0;
+        border-radius: 50px;
+        font-size: 25px;
+        color:white;
+        font-weight: 500;
+    }
 }
 
 .centro__frase{
@@ -19,41 +35,33 @@
     justify-content: space-evenly;
     flex-wrap:wrap;
     max-width: 950px;
-    margin-top: 110px;
+    margin-bottom: 35px;
 
     .centro__busqueda--opcion {
         border: 0;
         display: flex;
         flex-flow: column;
         align-items: center;
-        width: 33%;
+        width: 260px;
+        margin-left: 10px;
+        margin-right: 10px;
 
         label {
             font-size: 35px;
             font-weight: 600;
             text-align: center;
             display: block;
+            margin-bottom: 30px;
         }
 
         select {
             background-color: variable.$boxes-color;
+            font-size: 15px;
             width: 260px;
             height: 40px;
             border:none;
             border-radius: 10px;
             padding-left: 15px;
         }
-    }
-
-    .centro__busqueda--boton {
-        height: 40px;
-        width: 170px;
-        margin-top: 40px;
-        background-color: variable.$button-color;
-        border: 0;
-        border-radius: 50px;
-        font-size: 25px;
-        color:white;
-        font-weight: 500;
     }
 }

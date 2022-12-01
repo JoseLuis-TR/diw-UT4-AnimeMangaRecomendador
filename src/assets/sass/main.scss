@@ -1,0 +1,13 @@
+@import 'base/reset';
+@import 'base/background';
+
+@import 'layout/header';
+@import 'layout/contenedorResultados';
+
+@import 'utilities/variables';
+
+@import 'components/busqueda';
+@import 'components/cajaResultados';
+
+@import 'views/index';
+@import 'views/searchResult';
