@@ -1,0 +1,40 @@
+body{
+  overflow-x: hidden;
+}
+
+.contenedorError{
+  display: flex;
+  flex-direction: column;
+
+  .contenedorError__gif1 {
+    height: 35%;
+    width: max-content;
+    position: absolute;
+    bottom: 0;
+
+    animation: linear infinite;
+    animation-name: andar;
+    animation-duration: 20s;
+  }
+
+  @keyframes andar {
+    0% {
+      left: -10%;
+      transform: scaleX(-1);
+    }
+    49%{
+      transform: scaleX(-1);
+    }
+    50%{
+      transform: scaleX(1);
+      left: 105%;
+    }
+    99%{
+      transform: scaleX(1);
+    }
+    100% {
+      transform: scaleX(-1);
+      left: -10%;
+    }
+  }
+}

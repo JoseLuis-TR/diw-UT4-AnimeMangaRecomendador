@@ -148,7 +148,7 @@ body {
   bottom: 0;
 }
 
-main {
+.contenedorCentro {
   flex-flow: column;
   align-items: center;
   display: flex;
@@ -218,10 +218,52 @@ main {
   transform: translateX(-100%);
 }
 
-main {
+.contenedorBusqueda {
   flex-flow: column;
   align-items: center;
   display: flex;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.contenedorError {
+  flex-direction: column;
+  display: flex;
+}
+
+.contenedorError .contenedorError__gif1 {
+  height: 35%;
+  width: max-content;
+  animation: 20s linear infinite andar;
+  position: absolute;
+  bottom: 0;
+}
+
+@keyframes andar {
+  0% {
+    left: -10%;
+    transform: scaleX(-1);
+  }
+
+  49% {
+    transform: scaleX(-1);
+  }
+
+  50% {
+    left: 105%;
+    transform: scaleX(1);
+  }
+
+  99% {
+    transform: scaleX(1);
+  }
+
+  100% {
+    left: -10%;
+    transform: scaleX(-1);
+  }
 }
 
 /*# sourceMappingURL=index.034b6250.css.map */
