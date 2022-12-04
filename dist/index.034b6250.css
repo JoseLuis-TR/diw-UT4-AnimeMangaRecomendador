@@ -32,8 +32,8 @@ body {
 }
 
 .header .header__menu {
-  max-width: 60px;
   margin-left: 60px;
+  font-size: 60px;
 }
 
 .centro__busqueda {
@@ -46,6 +46,50 @@ body {
   flex-wrap: wrap;
   justify-content: space-around;
   display: flex;
+}
+
+.header__menu {
+  cursor: pointer;
+}
+
+.contenedorMenu {
+  filter: blur(10px);
+  width: 100%;
+  height: 100vh;
+  background-color: #0003;
+  position: absolute;
+}
+
+.contenedorMenu__menu {
+  height: 50vh;
+  width: 0;
+  -webkit-backdrop-filter: blur(.8px);
+  backdrop-filter: blur(.8px);
+  background: #d2d8de;
+  padding-top: 60px;
+  transition: all .5s;
+  position: fixed;
+  top: 5%;
+  left: 0;
+  overflow-x: hidden;
+}
+
+.contenedorMenu__menu .contenedorMenu__menu--enlace {
+  color: #000;
+  padding: 8px 8px 8px 32px;
+  font-size: 25px;
+  text-decoration: none;
+  transition: all .3s;
+  display: block;
+}
+
+.contenedorMenu__menu .contenedorMenu__menu--close {
+  cursor: pointer;
+  margin-left: 50px;
+  font-size: 36px;
+  position: absolute;
+  top: 0;
+  right: 25px;
 }
 
 .centro {
