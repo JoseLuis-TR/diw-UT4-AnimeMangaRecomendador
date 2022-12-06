@@ -5,7 +5,12 @@
   font-family: Urbanist, Arial, Helvetica, sans-serif;
 }
 
+html {
+  min-height: 100%;
+}
+
 body {
+  height: 100%;
   background-color: #00e9df;
   background-image: url("wave.3177c9d8.png");
   background-position: top;
@@ -53,43 +58,107 @@ body {
 }
 
 .contenedorMenu {
-  filter: blur(10px);
   width: 100%;
-  height: 100vh;
-  background-color: #0003;
+  min-height: 100vh;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  z-index: 1;
+  background-color: #0000004d;
+  display: none;
   position: absolute;
+  top: 0;
 }
 
-.contenedorMenu__menu {
-  height: 50vh;
-  width: 0;
+.contenedorMenu .contenedorMenu__menu {
+  height: 300px;
+  width: 350px;
+  min-width: 200px;
   -webkit-backdrop-filter: blur(.8px);
   backdrop-filter: blur(.8px);
-  background: #d2d8de;
-  padding-top: 60px;
+  background: #fff;
+  border-radius: 20px;
+  grid-template: "perfil perfil perfil perfil perfil perfil" 1fr
+                 "login login login registro registro registro" 1fr
+                 "inicio inicio lista lista contacto contacto" 1fr
+                 / 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-auto-flow: row;
+  gap: 0;
   transition: all .5s;
+  display: grid;
   position: fixed;
   top: 5%;
-  left: 0;
-  overflow-x: hidden;
+  left: 5%;
 }
 
-.contenedorMenu__menu .contenedorMenu__menu--enlace {
+.contenedorMenu .contenedorMenu__menu .contenedorMenu__menu__perfil {
+  width: 100%;
+  height: 150px;
+  border-bottom: 1px solid #0000001a;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  font-weight: bold;
+  display: flex;
+}
+
+.contenedorMenu .contenedorMenu__menu .contenedorMenu__menu__perfil .contenedorMenu__menu__perfil--pfp {
+  max-width: 100px;
+  border-radius: 50px;
+}
+
+.contenedorMenu .contenedorMenu__menu .contenedorMenu__menu--enlace {
+  max-width: 100%;
+  width: 80px;
   color: #000;
-  padding: 8px 8px 8px 32px;
-  font-size: 25px;
+  text-align: center;
+  background-color: #d2d8de;
+  border-radius: 20px;
+  flex-direction: column;
+  justify-content: center;
+  margin: 7px auto;
+  font-size: 1rem;
   text-decoration: none;
   transition: all .3s;
+  display: flex;
+}
+
+.contenedorMenu .contenedorMenu__menu .contenedorMenu__menu--close {
+  cursor: pointer;
+  background-color: #bec8d1;
+  border-radius: 10px;
+  font-size: 25px;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+}
+
+.mostrar {
   display: block;
 }
 
-.contenedorMenu__menu .contenedorMenu__menu--close {
-  cursor: pointer;
-  margin-left: 50px;
-  font-size: 36px;
-  position: absolute;
-  top: 0;
-  right: 25px;
+.perfil {
+  grid-area: perfil;
+}
+
+.login {
+  grid-area: login;
+}
+
+.registro {
+  grid-area: registro;
+}
+
+.inicio {
+  grid-area: inicio;
+}
+
+.lista {
+  grid-area: lista;
+}
+
+.contacto {
+  grid-area: contacto;
 }
 
 .centro {

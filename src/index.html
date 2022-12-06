@@ -15,13 +15,35 @@
                 <img class="header__logo" alt="logo AML" src="assets/images/logoAML2.png">
             </a>
         </header>
-            <nav class="contenedorMenu__menu" id="menu">
+        <div class="contenedorMenu" id="menu">
+            <nav class="contenedorMenu__menu" id="menu__opciones">
                 <i class="contenedorMenu__menu--close material-symbols-rounded" onclick="cerrarMenu()">Close</i>
-                <a class="contenedorMenu__menu--enlace" href="#">Inicio</a>
-                <a class="contenedorMenu__menu--enlace" href="#">Mi Lista</a>
-                <a class="contenedorMenu__menu--enlace" href="#">Mi perfil</a>
-                <a class="contenedorMenu__menu--enlace" href="#">Contacto</a>
+                <div class="contenedorMenu__menu__perfil perfil">
+                    <img class="contenedorMenu__menu__perfil--pfp" src="assets/images/pfp.jpg">
+                    <p>Usuario</p>
+                </div>
+                <a class="contenedorMenu__menu--enlace login" href="#">
+                    <i class="material-symbols-rounded">login</i>
+                    <p>Login</p>
+                </a>
+                <a class="contenedorMenu__menu--enlace registro" href="#">
+                    <i class="material-symbols-rounded">person_add</i>
+                    <p>Registro</p>
+                </a>
+                <a class="contenedorMenu__menu--enlace inicio" href="#">
+                    <i class="material-symbols-rounded">home</i>
+                    <p>Inicio</p>
+                </a>
+                <a class="contenedorMenu__menu--enlace lista" href="#">
+                    <i class="material-symbols-rounded">list</i>
+                    <p>Mi lista</p>
+                </a>
+                <a class="contenedorMenu__menu--enlace contacto" href="#">
+                    <i class="material-symbols-rounded">mail</i>
+                    <p>Contacto</p>
+                </a>
             </nav>
+        </div>
         <main class="contenedorCentro">
             <article class="centro">
                 <h2 class="centro__frase">Descubre tu nuevo anime o manga favorito gracias a AMR.</h2>

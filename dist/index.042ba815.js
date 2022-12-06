@@ -1,9 +1,12 @@
 const MENU = document.getElementById("menu");
+const MENU_OPCIONES = document.getElementById("menu__opciones");
 function abrirMenu() {
-    MENU.style.width = "250px";
+    console.log("hey");
+    MENU.classList.toggle("mostrar");
 }
 function cerrarMenu() {
-    MENU.style.width = "0";
+    console.log("no");
+    MENU.classList.toggle("mostrar");
 }
 
 //# sourceMappingURL=index.042ba815.js.map
