@@ -36,3 +36,9 @@
     font-weight: 500;
   }
 }
+
+@media only screen and (max-width: 550px){
+  .resultados__caja{
+    width: 220px;
+  }
+}

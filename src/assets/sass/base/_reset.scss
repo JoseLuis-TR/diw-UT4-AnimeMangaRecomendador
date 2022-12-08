@@ -3,10 +3,12 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Urbanist",Arial, Helvetica, sans-serif;
+  outline: 1px solid red;
 }
 
 html {
   min-height: 100%;
+  overflow-x: hidden;
 }
 
 body {

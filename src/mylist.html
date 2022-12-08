@@ -5,17 +5,45 @@
         <title>Mi lista de guardados</title>
         <link rel="stylesheet" href="assets/sass/main.scss">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Urbanist">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
     </head>
     <body>
         <header class="header">
-            <a href="">
-                <img class="header__menu" src="assets/images/menu.png">
-            </a>
+            <i class="header__menu material-symbols-rounded" onclick="abrirMenu()">menu</i>
             <h1 class="header__titulo">¿Qué deseas ver hoy?</h1>
             <a href="index.html">
                 <img class="header__logo" alt="logo AML" src="assets/images/logoAML2.png">
             </a>
         </header>
+        <nav class="menu" id="menu__opciones">
+            <i class="menu__close material-symbols-rounded" onclick="cerrarMenu()">Close</i>
+            <div class="menu__perfil perfil">
+                <a href="#" class="menu__perfil__enlace">
+                    <img class="menu__perfil__enlace--pfp" src="assets/images/pfp.jpg">
+                    <p>Usuario</p>
+                </a>
+            </div>
+            <a class="menu__enlace login" href="#">
+                <i class="material-symbols-rounded">login</i>
+                <p>Login</p>
+            </a>
+            <a class="menu__enlace registro" href="#">
+                <i class="material-symbols-rounded">person_add</i>
+                <p>Registro</p>
+            </a>
+            <a class="menu__enlace inicio" href="index.html">
+                <i class="material-symbols-rounded">home</i>
+                <p>Inicio</p>
+            </a>
+            <a class="menu__enlace lista" href="mylist.html">
+                <i class="material-symbols-rounded">list</i>
+                <p>Mi lista</p>
+            </a>
+            <a class="menu__enlace contacto" href="#">
+                <i class="material-symbols-rounded">mail</i>
+                <p>Contacto</p>
+            </a>
+        </nav>
         <main>
             <article class="centro">
                 <form class="centro__busqueda">
@@ -28,9 +56,7 @@
                         </select>
                     </fieldset>
                 </form>
-                <a href="mylist.html">
-                    <input class="centro__botonBusqueda" type="button" value="Buscar" />
-                </a>
+                <a class="centro__inputBusqueda" href="mylist.html">Buscar</a>
             </article>
             <article class="resultados">
                 <section class="resultados__caja">
@@ -54,4 +80,5 @@
             </article>
         </main>
     </body>
+    <script src="/src/assets/js/menu.js"></script>
 </html>

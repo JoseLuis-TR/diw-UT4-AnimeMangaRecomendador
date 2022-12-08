@@ -3,8 +3,7 @@
     <head>
         <title>AMR</title>
         <link rel="stylesheet" href="assets/sass/main.scss">
-        <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Urbanist">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Urbanist">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />    </head>
     <body>
         <article class="wave-container"></article>
@@ -15,39 +14,39 @@
                 <img class="header__logo" alt="logo AML" src="assets/images/logoAML2.png">
             </a>
         </header>
-        <div class="contenedorMenu" id="menu">
-            <nav class="contenedorMenu__menu" id="menu__opciones">
-                <i class="contenedorMenu__menu--close material-symbols-rounded" onclick="cerrarMenu()">Close</i>
-                <div class="contenedorMenu__menu__perfil perfil">
-                    <img class="contenedorMenu__menu__perfil--pfp" src="assets/images/pfp.jpg">
-                    <p>Usuario</p>
+            <nav class="menu" id="menu__opciones">
+                <i class="menu__close material-symbols-rounded" onclick="cerrarMenu()">Close</i>
+                <div class="menu__perfil perfil">
+                    <a href="404.html" class="menu__perfil__enlace">
+                        <img class="menu__perfil__enlace--pfp" src="assets/images/pfp.jpg">
+                        <p>Usuario</p>
+                    </a>
                 </div>
-                <a class="contenedorMenu__menu--enlace login" href="#">
+                <a class="menu__enlace login" href="#">
                     <i class="material-symbols-rounded">login</i>
                     <p>Login</p>
                 </a>
-                <a class="contenedorMenu__menu--enlace registro" href="#">
+                <a class="menu__enlace registro" href="#">
                     <i class="material-symbols-rounded">person_add</i>
                     <p>Registro</p>
                 </a>
-                <a class="contenedorMenu__menu--enlace inicio" href="#">
+                <a class="menu__enlace inicio" href="index.html">
                     <i class="material-symbols-rounded">home</i>
                     <p>Inicio</p>
                 </a>
-                <a class="contenedorMenu__menu--enlace lista" href="#">
+                <a class="menu__enlace lista" href="mylist.html">
                     <i class="material-symbols-rounded">list</i>
                     <p>Mi lista</p>
                 </a>
-                <a class="contenedorMenu__menu--enlace contacto" href="#">
+                <a class="menu__enlace contacto" href="#">
                     <i class="material-symbols-rounded">mail</i>
                     <p>Contacto</p>
                 </a>
             </nav>
-        </div>
         <main class="contenedorCentro">
             <article class="centro">
                 <h2 class="centro__frase">Descubre tu nuevo anime o manga favorito gracias a AMR.</h2>
-                <form class="centro__busqueda">
+                <form class="centro__busqueda busqueda__inicio">
                     <fieldset class="centro__busqueda--opcion">
                         <label for="genero">Género</label>
                         <select name="genero" id="genero">
@@ -81,9 +80,7 @@
                         </select>
                     </fieldset>
                 </form>
-                <a href="searchResult.html">
-                    <input class="centro__botonBusqueda" type="button" value="Buscar" />
-                </a>
+                <a class="centro__inputBusqueda" href="searchResult.html">Buscar</a>
             </article>
             <article class="chooser">
                 <p id="chooser__titulo" class="chooser__titulo">Anime</p>

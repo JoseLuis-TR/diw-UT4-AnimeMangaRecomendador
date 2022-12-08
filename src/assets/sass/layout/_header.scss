@@ -1,22 +1,73 @@
+@use '../utilities/variables' as variable;
+
 .header {
+  position: sticky;
+  top: 0;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   height: 160px;
+  width: 100%;
+  z-index: 2;
+  overflow-x: hidden;
+  background: rgb(204,251,249);
+  background: linear-gradient(180deg, rgba(204,251,249,1) 85%, rgba(0,212,255,0) 100%);
 
   .header__titulo{
     font-weight: bold;
     font-size: 60px;
+    text-align: center;
   }
 
   .header__logo{
     width: 120px;
-    margin-right: 60px;
+    margin: 0 30px;
   }
 
   .header__menu{
     font-size: 60px;
-    margin-left: 60px;
+    margin: 0 30px;
+  }
+}
+
+@media only screen and (max-width: 800px){
+  .header{
+    .header__menu{
+      
+    }
+    .header__titulo{
+      font-size: 40px;
+    }
+    .header__logo{
+
+    }
+  }
+}
+
+@media only screen and (max-width: 660px){
+  .header{
+    .header__menu{
+      font-size: 40px;
+    }
+    .header__titulo{
+      font-size: 30px;
+    }
+    .header__logo{
+      width: 100px;
+    }
+  }
+}
+
+@media only screen and (max-width: 350px){
+  .header{
+    .header__menu{
+      
+    }
+    .header__titulo{
+      font-size: 20px;
+    }
+    .header__logo{
+      width: 90px;
+    }
   }
 }

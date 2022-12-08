@@ -1,13 +1,55 @@
-body{
-  overflow-x: hidden;
-}
+@use '../utilities/variables' as variable;
+
 
 .contenedorError{
+  height: 50vh;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  .contenedorError__mensaje{
+    height: fit-content;
+    max-height: 90%;
+    min-width: 300px;
+    max-width: 90%;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow: 6px 6px 12px 1px;
+
+    .contenedorError__mensaje--titulo{
+      width: 80%;
+      padding: 10px;
+      margin: 20px 0;
+      background-color: variable.$boxes-color;
+      border-radius: 10px;
+      font-size: 50px;
+    }
+
+    .contenedorError__mensaje--descripcion{
+      max-width: 70%;
+      padding: 10px;
+      margin: 20px 0;
+      background-color: variable.$boxes-color;
+      border-radius: 10px;
+      font-size: 25px;
+
+      > p {
+        margin: 10px 0;
+
+        > a {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
 
   .contenedorError__gif1 {
-    height: 35%;
+    height: 30%;
     width: max-content;
     position: absolute;
     bottom: 0;
@@ -17,9 +59,20 @@ body{
     animation-duration: 20s;
   }
 
+  .contenedorError__gif2 {
+    height: 20%;
+    width: max-content;
+    position: absolute;
+    bottom: 0;
+
+    animation: linear infinite;
+    animation-name: andar2;
+    animation-duration: 5s;
+  }
+
   @keyframes andar {
     0% {
-      left: -10%;
+      left: -35%;
       transform: scaleX(-1);
     }
     49%{
@@ -34,7 +87,28 @@ body{
     }
     100% {
       transform: scaleX(-1);
-      left: -10%;
+      left: -35%;
+    }
+  }
+
+  @keyframes andar2 {
+    0% {
+      left: -35%;
+      transform: scaleX(-1);
+    }
+    49%{
+      transform: scaleX(-1);
+    }
+    50%{
+      transform: scaleX(1);
+      left: 105%;
+    }
+    99%{
+      transform: scaleX(1);
+    }
+    100% {
+      transform: scaleX(-1);
+      left: -35%;
     }
   }
 }
