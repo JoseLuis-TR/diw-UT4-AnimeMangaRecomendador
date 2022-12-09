@@ -26,7 +26,7 @@ body {
   width: 100%;
   z-index: 2;
   background: linear-gradient(#ccfbf9 85%, #00d4ff00 100%);
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   display: flex;
   position: sticky;
@@ -42,11 +42,16 @@ body {
 
 .header .header__logo {
   width: 120px;
-  margin: 0 30px;
+  justify-content: center;
+  display: flex;
+}
+
+.header .header__logo .header__logo--imagen {
+  width: 120px;
 }
 
 .header .header__menu {
-  margin: 0 30px;
+  margin-left: 30px;
   font-size: 60px;
 }
 
@@ -65,18 +70,18 @@ body {
     font-size: 30px;
   }
 
-  .header .header__logo {
+  .header .header__logo .header__logo--imagen {
     width: 100px;
   }
 }
 
-@media only screen and (max-width: 350px) {
+@media only screen and (max-width: 470px) {
   .header .header__titulo {
     font-size: 20px;
   }
 
-  .header .header__logo {
-    width: 90px;
+  .header .header__logo .header__logo--imagen {
+    width: 70px;
   }
 }
 
