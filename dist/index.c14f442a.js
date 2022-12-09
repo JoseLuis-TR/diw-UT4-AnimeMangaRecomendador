@@ -2,11 +2,11 @@ const CHECK_ANIMANGA = document.getElementById("check");
 const TITULO_PAG = document.getElementById("header__titulo");
 const TITULO_CHOOSER = document.getElementById("chooser__titulo");
 if (CHECK_ANIMANGA.checked) {
-    TITULO_PAG.innerHTML = "\xbfQue deseas leer hoy?";
+    TITULO_PAG.innerHTML = "\xbfQu\xe9 deseas leer hoy?";
     TITULO_CHOOSER.innerHTML = "Manga";
     TITULO_PAG.classList.add("muestra");
 } else {
-    TITULO_PAG.innerHTML = "\xbfQue deseas ver hoy?";
+    TITULO_PAG.innerHTML = "\xbfQu\xe9 deseas ver hoy?";
     TITULO_CHOOSER.innerHTML = "Anime";
     TITULO_PAG.classList.add("muestra");
 }
@@ -16,12 +16,12 @@ CHECK_ANIMANGA.addEventListener("change", function() {
     if (CHECK_ANIMANGA.checked) {
         TITULO_PAG.style.transition = "opacity 0.5s linear 0s";
         TITULO_PAG.style.opacity = 1;
-        TITULO_PAG.innerHTML = "\xbfQue deseas leer hoy?";
+        TITULO_PAG.innerHTML = "\xbfQu\xe9 deseas leer hoy?";
         TITULO_CHOOSER.innerHTML = "Manga";
     } else {
         TITULO_PAG.style.transition = "opacity 0.5s linear 0s";
         TITULO_PAG.style.opacity = 1;
-        TITULO_PAG.textContent = "\xbfQue deseas ver hoy?";
+        TITULO_PAG.textContent = "\xbfQu\xe9 deseas ver hoy?";
         TITULO_CHOOSER.innerHTML = "Anime";
     }
 });

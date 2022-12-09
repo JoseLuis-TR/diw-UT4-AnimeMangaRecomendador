@@ -1,0 +1,166 @@
+@use '../utilities/variables' as variable;
+
+.contenedorGenerico {
+    background-color: white;
+    width: 80%;
+    max-width: 540px;
+    height: fit-content;
+    margin-top: 5vh;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    .contenedorGenerico__mensaje{
+        width: 80%;
+        text-align: center;
+        margin: 7% 0 3%;
+        font-size: 20px;
+        transition: 0.5s;
+    }
+    .contenedorGenerico__formulario{
+        width: 50%;
+        max-width: 340px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 3% 0 5%;
+        transition: 0.5s;
+        .contenedorGenerico__formulario--input{
+            width: 100%;
+            max-width: 260px;
+            height: 30px;
+            border: none;
+            border-radius: 10px;
+            background: variable.$boxes-color;
+            margin: 10px 0;
+            padding-left: 10px;
+            transition: 0.5s;
+            &::placeholder{
+                font-size: 15px;
+                opacity: 0.7;
+            }
+            &:focus{
+                outline: 1px solid #666666;
+            }
+        }
+        .contenedorGenerico__formulario--label{
+            display: none;
+        }
+
+        .contenedorGenerico__formulario--textArea{
+            width: 100%;
+            max-width: 260px;
+            height: 250px;
+            border: none;
+            border-radius: 10px;
+            background: variable.$boxes-color;
+            padding-left: 10px;
+            padding-top: 10px;
+            margin: 10px 0 20px 0;
+            resize: none;
+            transition: 0.5s;
+            &:focus{
+                outline: 1px solid #666666;
+            }
+        }
+
+        .contenedorGenerico__formulario--submit{
+            height: 40px;
+            width: 170px;
+            transition: 0.5s;
+            background-color: variable.$button-color;
+            border: none;
+            border-radius: 50px;
+            margin-bottom: 7%;
+            font-size: 25px;
+            color:white;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            &:hover{
+                background-color: variable.$button-color-darker;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .contenedorGenerico {
+        .contenedorGenerico__mensaje{
+            width: 80%;
+            text-align: center;
+            margin: 15% 0 3%;
+            font-size: 15px;
+        }
+        .contenedorGenerico__formulario{
+            width: 50%;
+            max-width: 340px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 3% 0 5%;
+            .contenedorGenerico__formulario--input{
+                width: 100%;
+                max-width: 260px;
+                height: 30px;
+                border: none;
+                border-radius: 10px;
+                background: variable.$boxes-color;
+                margin: 10px 0;
+                padding-left: 10px;
+                &::placeholder{
+                    font-size: 15px;
+                    opacity: 0.7;
+                }
+                &:focus{
+                    outline: 1px solid #666666;
+                }
+            }
+            .contenedorGenerico__formulario--label{
+                display: none;
+            }
+
+            .contenedorGenerico__formulario--textArea{
+                width: 100%;
+                max-width: 260px;
+                height: 100px;
+                border: none;
+                border-radius: 10px;
+                background: variable.$boxes-color;
+                padding-left: 10px;
+                padding-top: 10px;
+                margin: 10px 0 20px 0;
+                resize: none;
+                &:focus{
+                    outline: 1px solid #666666;
+                }
+            }
+
+            .contenedorGenerico__formulario--submit{
+                height: 40px;
+                width: 170px;
+                transition: 0.5s;
+                background-color: variable.$button-color;
+                border: none;
+                border-radius: 50px;
+                margin-bottom: 10%;
+                font-size: 25px;
+                color:white;
+                font-weight: 500;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                &:hover{
+                    background-color: variable.$button-color-darker;
+                }
+            }
+        }
+    }
+}

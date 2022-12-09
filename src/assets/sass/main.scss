@@ -4,6 +4,7 @@
 @import 'layout/header';
 @import 'layout/contenedorResultados';
 @import 'layout/menu';
+@import 'layout/formularioGenerico';
 
 @import 'utilities/variables';
 
@@ -12,4 +13,5 @@
 
 @import 'views/index';
 @import 'views/searchResult';
-@import "views/404";
+@import 'views/404';
+@import 'views/myList'

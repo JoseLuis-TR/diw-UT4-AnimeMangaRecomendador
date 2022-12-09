@@ -1,7 +1,5 @@
 @use '../utilities/variables' as variable;
 
-// TODO Retocar los botones de busqueda
-
 .centro {
     display: flex;
     flex-flow: column;
@@ -11,9 +9,10 @@
     .centro__inputBusqueda{
         height: 40px;
         width: 170px;
-        margin-bottom: 30px;
+        transition: 0.5s;
         background-color: variable.$button-color;
         border-radius: 50px;
+        margin-bottom: 10px;
         font-size: 25px;
         color:white;
         font-weight: 500;
@@ -29,7 +28,7 @@
     flex-wrap:wrap;
     margin-top: 0px;
     max-width: 950px;
-    margin-bottom: 35px;
+    margin-bottom: 20px;
 
     .centro__busqueda--opcion {
         border: 0;
@@ -39,7 +38,6 @@
         width: 260px;
         margin-left: 10px;
         margin-right: 10px;
-        transition: all 500ms;
 
         label {
             font-size: 35px;
@@ -58,6 +56,7 @@
             border:none;
             border-radius: 10px;
             padding-left: 15px;
+            transition: 0.5s;
         }
     }
 }
@@ -74,6 +73,15 @@
 }
 
 @media only screen and (max-width: 350px){
+    .centro{
+        .centro__inputBusqueda{
+            height: 30px;
+            width: 130px;
+            margin-bottom: 30px;
+            font-size: 20px;
+        }
+    }
+
     .centro__busqueda{
         .centro__busqueda--opcion{
             label{
@@ -81,6 +89,7 @@
             }
             select{
                 font-size: 15px;
+                height: 30px;
                 width: 200px;
             }
         }

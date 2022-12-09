@@ -22,18 +22,18 @@
     box-shadow: 6px 6px 12px 1px;
 
     .contenedorError__mensaje--titulo{
-      width: 80%;
-      padding: 10px;
-      margin: 20px 0;
+      width: 90%;
+      padding: 5px;
+      margin:  10px 0 5px 0;
       background-color: variable.$boxes-color;
       border-radius: 10px;
       font-size: 50px;
     }
 
     .contenedorError__mensaje--descripcion{
-      max-width: 70%;
-      padding: 10px;
-      margin: 20px 0;
+      max-width: 80%;
+      padding: 5px;
+      margin:  10px 0 10px 0;
       background-color: variable.$boxes-color;
       border-radius: 10px;
       font-size: 25px;
@@ -109,6 +109,58 @@
     100% {
       transform: scaleX(-1);
       left: -35%;
+    }
+  }
+}
+
+@media only screen and (max-width: 670px){
+  .contenedorError{
+    .contenedorError__mensaje{
+      .contenedorError__mensaje--titulo{
+        margin: 10px 0 5px 0;
+        font-size: 30px;
+      }
+      .contenedorError__mensaje--descripcion{
+        padding: 5px;
+        margin: 10px 0 5px 0;
+        background-color: variable.$boxes-color;
+        border-radius: 10px;
+        font-size: 20px;
+  
+        > p {
+          margin: 10px 0;
+  
+          > a {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 400px){
+  .contenedorError{
+    .contenedorError__mensaje{
+      .contenedorError__mensaje--titulo{
+        margin: 10px 0 5px 0;
+        font-size: 25px;
+      }
+      .contenedorError__mensaje--descripcion{
+        padding: 5px;
+        margin: 10px 0 5px 0;
+        background-color: variable.$boxes-color;
+        border-radius: 10px;
+        font-size: 15px;
+  
+        > p {
+          margin: 10px 0;
+  
+          > a {
+            text-decoration: underline;
+          }
+        }
+      }
     }
   }
 }

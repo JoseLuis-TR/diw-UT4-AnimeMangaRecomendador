@@ -1,18 +1,18 @@
 .resultados__caja {
   position: relative;
   width: 260px;
-  height: 400px;
   margin: 20px;
   border-radius: 10px;
   flex: 30%;
   display: flex;
   justify-content: center;
+  transition: 0.5s;
 
   .resultados__caja--imagen {
     width: 260px;
-    height: 100%;
     border-radius: 10px;
     margin: auto;
+    transition: 0.5s;
   }
 
   .resultados__caja--cuadroTexto {
@@ -23,7 +23,7 @@
     border-radius: 10px;
     background: rgb(0, 0, 0);
     background: linear-gradient(0deg, rgba(0, 0, 0, 1) 15%, rgba(255, 255, 255, 0) 100%);
-
+    transition: 0.5s;
   }
 
   .resultados__caja--nombreSerie {
@@ -37,8 +37,17 @@
   }
 }
 
-@media only screen and (max-width: 550px){
+@media only screen and (max-width: 350px){
   .resultados__caja{
-    width: 220px;
+    width: 200px;
+    .resultados__caja--imagen{
+      width: 200px;
+    }
+    .resultados__caja--cuadroTexto{
+      width: 200px;
+    }
+    .resultados__caja--nombreSerie{
+      font-size: 20px;
+    }
   }
 }
