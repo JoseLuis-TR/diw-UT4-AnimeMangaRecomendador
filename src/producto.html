@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>AMR</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="assets/sass/main.scss">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Urbanist">
+    </head>
+    <body>
+    <article class="wave-container"></article>
+    <header class="header">
+        <i class="header__menu material-symbols-rounded" onclick="abrirMenu()">menu</i>
+        <a class="header__logo" href="index.html">
+            <img class="header__logo--imagen" alt="logo AML" src="assets/images/logoAML2.png">
+        </a>
+    </header>
+    <nav class="menu" id="menu__opciones">
+        <i class="menu__close material-symbols-rounded" onclick="cerrarMenu()">Close</i>
+        <div class="menu__perfil perfil">
+            <a href="404.html" class="menu__perfil__enlace">
+                <img class="menu__perfil__enlace--pfp" src="assets/images/pfp.jpg">
+                <p>Usuario</p>
+            </a>
+        </div>
+        <a class="menu__enlace login" href="login.html">
+            <i class="material-symbols-rounded">login</i>
+            <p>Login</p>
+        </a>
+        <a class="menu__enlace registro" href="registro.html">
+            <i class="material-symbols-rounded">person_add</i>
+            <p>Registro</p>
+        </a>
+        <a class="menu__enlace inicio" href="index.html">
+            <i class="material-symbols-rounded">home</i>
+            <p>Inicio</p>
+        </a>
+        <a class="menu__enlace lista" href="mylist.html">
+            <i class="material-symbols-rounded">list</i>
+            <p>Mi lista</p>
+        </a>
+        <a class="menu__enlace contacto" href="contacto.html">
+            <i class="material-symbols-rounded">mail</i>
+            <p>Contacto</p>
+        </a>
+    </nav>
+    <main class="contenedorCentro">
+        <article class="contenedorSerie">
+            <section class="contenedorSerie__poster">
+                <img src="/src/assets/images/serie1.jpg" alt="Poster de la serie [Nombre]" class="contenedorSerie__poster--imagen">
+            </section>
+            <section class="contenedorSerie__info">
+                <h2 class="contenedorSerie__info--titulo">Chainsaw-man</h2>
+                <div class="contenedorSerie__info--basico">
+                    <p class="contenedorSerie__info--basico--texto">2022</p>
+                    <p class="contenedorSerie__info--basico--texto">12 capitulos</p>
+                </div>
+            </section>
+            <section class="contenedorSerie__sinopsis">
+                <p class="contenedorSerie__sinopsis--texto">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vestibulum a est ac mattis. Vestibulum quam odio, condimentum sit amet nibh sit amet, hendrerit scelerisque massa. Vestibulum vehicula iaculis quam. Phasellus gravida metus purus. Duis ut dictum nisl, et consequat sapien. Curabitur in dictum felis, eu fringilla metus. Morbi vel vestibulum odio. Proin porta augue ut laoreet posuere. Ut quis nibh tristique, elementum nisi non, dapibus mauris. Vivamus eu metus ac dui blandit ultricies sit amet et mauris.
+                </p>
+            </section>
+            <section class="contenedorSerie__extra">
+                <div class="contenedorSerie__extra--nota">
+                    <img src="/src/assets/images/smile.png" alt="Smile" class="contenedorSerie__extra--nota--imagen">
+                    <p class="contenedorSerie__extra--nota--texto">90%</p>
+                </div>
+                <a class="contenedorSerie__extra--linkAnilist" href="#">
+                    <img src="/src/assets/images/anilist.png" alt="Logo de Anilist" class="contenedorSerie__extra--linkAnilist--imagen">
+                    <p class="contenedorSerie__extra--linkAnilist--texto">Ver + info</p>
+                </a>
+            </section>
+            <footer class="contenedorSerie__footer">
+                <section class="contenedorSerie__footer--generos">
+                    <p class="contenedorSerie__footer--generos--texto">acción</p>
+                    <p class="contenedorSerie__footer--generos--texto">drama</p>
+                </section>
+                <section class="contenedorSerie__footer--checkbox">
+                    <input id="check-prod" type="checkbox" class="contenedorSerie__footer--checkbox--check">
+                    <label for="check-prod" class="contenedorSerie__footer--checkbox--label"></label>
+                </section>
+            </footer>
+        </article>
+    </main>
+    </body>
+    <script src="/src/assets/js/menu.js"></script>
+</html>

@@ -69,11 +69,14 @@ a {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    transition: 0.3s;
+    transition: 0.5s;
     font-size: 17px;
     background-color: variable.$boxes-color;
     border-radius: 20px;
     margin: 8px auto;
+    &:hover{
+      background-color: variable.$boxes-color-darker;
+    }
 
     .material-symbols-rounded{
       font-size: 30px;
@@ -86,8 +89,12 @@ a {
     right: 5%;
     font-size: 25px;
     cursor: pointer;
-    background-color: variable.$boxes-color-darker;
+    background-color: variable.$boxes-color;
     border-radius: 10px;
+    transition: 0.5s;
+    &:hover{
+      background-color: variable.$boxes-color-darker;
+    }
   }
 }
 

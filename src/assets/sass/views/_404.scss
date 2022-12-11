@@ -20,6 +20,7 @@
     align-items: center;
     justify-content: flex-start;
     box-shadow: 6px 6px 12px 1px;
+    transition: 0.5s;
 
     .contenedorError__mensaje--titulo{
       width: 90%;
@@ -28,6 +29,7 @@
       background-color: variable.$boxes-color;
       border-radius: 10px;
       font-size: 50px;
+      transition: 0.5s;
     }
 
     .contenedorError__mensaje--descripcion{
@@ -37,6 +39,7 @@
       background-color: variable.$boxes-color;
       border-radius: 10px;
       font-size: 25px;
+      transition: 0.5s;
 
       > p {
         margin: 10px 0;
@@ -113,7 +116,7 @@
   }
 }
 
-@media only screen and (max-width: 670px){
+@media only screen and (max-width: 680px){
   .contenedorError{
     .contenedorError__mensaje{
       .contenedorError__mensaje--titulo{

@@ -1,0 +1,70 @@
+@use '../utilities/variables' as variable;
+
+.contenedorGenerico{
+    &__redesSociales{
+        width: 50%;
+        max-width: 340px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 3%;
+        &--boton{
+            width: 100%;
+            max-width: 260px;
+            height: 40px;
+            background: variable.$boxes-color;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px 0;
+            gap: 5%;
+            cursor: pointer;
+            transition: 0.5s;
+            &:hover{
+                background-color: variable.$boxes-color-darker;
+            }
+            &--logo{
+                width: 20px;
+                transition: 0.5s;
+            }
+            &--texto{
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .contenedorGenerico{
+        &__redesSociales{
+            &--boton{
+                &--texto{
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 450px){
+    .contenedorGenerico{
+        &__redesSociales{
+            &--boton{
+                width: 150%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 350px){
+    .contenedorGenerico{
+        &__redesSociales{
+            &--boton{
+                &--texto{
+                    display: none;
+                }
+            }
+        }
+    }
+}

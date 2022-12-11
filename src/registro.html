@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>AMR</title>
+        <link rel="stylesheet" href="assets/sass/main.scss">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Urbanist">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />    </head>
+    <body>
+        <article class="wave-container"></article>
+        <header class="header">
+            <i class="header__menu material-symbols-rounded" onclick="abrirMenu()">menu</i>
+            <h1 id="header__titulo" class="header__titulo">Registro</h1>
+            <a class="header__logo" href="index.html">
+                <img class="header__logo--imagen" alt="logo AML" src="assets/images/logoAML2.png">
+            </a>
+        </header>
+            <nav class="menu" id="menu__opciones">
+                <i class="menu__close material-symbols-rounded" onclick="cerrarMenu()">Close</i>
+                <div class="menu__perfil perfil">
+                    <a href="404.html" class="menu__perfil__enlace">
+                        <img class="menu__perfil__enlace--pfp" src="assets/images/pfp.jpg">
+                        <p>Usuario</p>
+                    </a>
+                </div>
+                <a class="menu__enlace login" href="login.html">
+                    <i class="material-symbols-rounded">login</i>
+                    <p>Login</p>
+                </a>
+                <a class="menu__enlace registro" href="registro.html">
+                    <i class="material-symbols-rounded">person_add</i>
+                    <p>Registro</p>
+                </a>
+                <a class="menu__enlace inicio" href="index.html">
+                    <i class="material-symbols-rounded">home</i>
+                    <p>Inicio</p>
+                </a>
+                <a class="menu__enlace lista" href="mylist.html">
+                    <i class="material-symbols-rounded">list</i>
+                    <p>Mi lista</p>
+                </a>
+                <a class="menu__enlace contacto" href="contacto.html">
+                    <i class="material-symbols-rounded">mail</i>
+                    <p>Contacto</p>
+                </a>
+            </nav>
+        <main class="contenedorCentro">
+            <article class="contenedorGenerico">
+                <form class="contenedorGenerico__formulario" action="index.html">
+                    <label class="contenedorGenerico__formulario--label" for="usuario" >Usuario</label>
+                    <input class="contenedorGenerico__formulario--input" type="text" name="usuario" id="usuario" placeholder="Nombre de usuario">
+                    <label class="contenedorGenerico__formulario--label" for="email" >Email</label>
+                    <input class="contenedorGenerico__formulario--input" type="email" name="email" id="email" placeholder="E-mail">
+                    <label class="contenedorGenerico__formulario--label" for="contraseña">Contraseña</label>
+                    <input class="contenedorGenerico__formulario--input" type="password" name="contraseña" id="contraseña" placeholder="Contraseña">
+                    <label class="contenedorGenerico__formulario--label" for="repetirContra">Repetir contraseña</label>
+                    <input class="contenedorGenerico__formulario--input" type="password" name="repetirContra" id="repetirContra" placeholder="Repetir contraseña">
+                    <section class="contenedorGenerico__formulario--condiciones">
+                        <input type="checkbox" class="contenedorGenerico__formulario--condiciones--checkbox">
+                        <p class="contenedorGenerico__formulario--condiciones--texto" >He leido y acepto las condiciones</p>
+                    </section>
+                    <input class="contenedorGenerico__formulario--submit" type="submit" value="Iniciar Sesion">
+                </form>
+                <p class="contenedorGenerico__letra">
+                    <span class="contenedorGenerico__letra--linea">o</span>
+                </p>
+                <section class="contenedorGenerico__redesSociales">
+                    <div class="contenedorGenerico__redesSociales--boton">
+                        <img src="/src/assets/images/google.png" alt="Logo Google" class="contenedorGenerico__redesSociales--boton--logo">
+                        <p class="contenedorGenerico__redesSociales--boton--texto">Continuar con Google</p>
+                    </div>
+                    <div class="contenedorGenerico__redesSociales--boton">
+                        <img src="/src/assets/images/facebook.png" alt="Logo Google" class="contenedorGenerico__redesSociales--boton--logo">
+                        <p class="contenedorGenerico__redesSociales--boton--texto">Continuar con Facebook</p>
+                    </div>
+                    <div class="contenedorGenerico__redesSociales--boton">
+                        <img src="/src/assets/images/twitter.png" alt="Logo Google" class="contenedorGenerico__redesSociales--boton--logo">
+                        <p class="contenedorGenerico__redesSociales--boton--texto">Continuar con Twitter</p>
+                    </div>
+                </section>
+            </article>
+        </main>
+
+    </body>
+    <script src="/src/assets/js/checkIndex.js"></script>
+    <script src="/src/assets/js/menu.js"></script>
+</html>

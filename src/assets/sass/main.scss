@@ -10,8 +10,12 @@
 
 @import 'components/busqueda';
 @import 'components/cajaResultados';
+@import 'components/redesSociales';
+@import 'components/producto';
 
 @import 'views/index';
 @import 'views/searchResult';
 @import 'views/404';
-@import 'views/myList'
+@import 'views/myList';
+@import 'views/login';
+@import 'views/registro';

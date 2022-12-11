@@ -1,0 +1,62 @@
+@use '../utilities/variables' as variable;
+
+.contenedorGenerico{
+    &__formulario{
+        &--recordar{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 5px 0 15px;
+            &--checkbox{
+                width: 15px;
+                transition: 0.5s;
+            }
+            &--texto{
+                font-size: 15px;
+                transition: 0.5s;
+
+            }
+        }
+    }
+    &__letra{
+        width: 90%;
+        text-align: center;
+        border-bottom: 1px solid #000;
+        line-height: 0.1em;
+        margin: 0 0 5%;
+        &--linea{
+            background: #fff;
+            padding: 0 10px;
+        }
+    }
+}
+
+@media only screen and (max-width: 450px){
+    .contenedorGenerico{
+        &__formulario{
+            &--recordar{
+                width: 120%;
+                &--checkbox{
+                    width: 13px;
+                }
+                &--texto{
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 350px){
+    .contenedorGenerico{
+        &__formulario{
+            &--recordar{
+                width: 150%;
+                &--texto{
+                    font-size: 11px;
+                }
+            }
+        }
+    }
+}

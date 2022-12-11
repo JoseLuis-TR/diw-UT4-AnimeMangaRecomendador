@@ -12,6 +12,7 @@
   margin-top: 5%;
   margin-bottom: 7%;
   max-width: 600px;
+  transition: 0.5s;
 }
 
 .chooser{
@@ -21,6 +22,7 @@
     font-weight: 600;
     text-align: center;
     margin-top: 40px;
+    transition: 0.5s;
   }
 
   .chooser__check{
@@ -33,7 +35,7 @@
     display: block;
     width: 145px;
     height: 75px;
-    background-color: variable.$secondary-color;
+    background-color: variable.$primary-color-toogle-background;
     border-radius: 100px;
     position: relative;
     cursor: pointer;
@@ -58,7 +60,7 @@
   }
 
   .chooser__check:checked + .chooser__label:after {
-    transition: 0.7s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
+    transition: 0.7s ease all;
     background-image: url("/src/assets/images/libro-w.png");
     left: calc(100% - 10px);
     transform: translateX(-100%);

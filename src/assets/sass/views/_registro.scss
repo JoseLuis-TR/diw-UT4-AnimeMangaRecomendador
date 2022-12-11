@@ -1,0 +1,48 @@
+.contenedorGenerico{
+    &__formulario{
+        &--condiciones{
+            width: 150%;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 5px 0 15px;
+            &--checkbox{
+                width: 15px;
+                transition: 0.5s;
+            }
+            &--texto{
+                font-size: 15px;
+                transition: 0.5s;
+
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 450px){
+    .contenedorGenerico{
+        &__formulario{
+            &--condiciones{
+                &--checkbox{
+                    width: 13px;
+                }
+                &--texto{
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 350px){
+    .contenedorGenerico{
+        &__formulario{
+            &--condiciones{
+                width: 150%;
+                &--texto{
+                    font-size: 11px;
+                }
+            }
+        }
+    }
+}
