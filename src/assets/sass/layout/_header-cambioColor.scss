@@ -17,7 +17,7 @@
   width: 100%;
   z-index: 2;
   overflow-x: hidden;
-  background: rgb(204,251,249);
+  background: var(--primary-color);
   background: linear-gradient(180deg, rgba(204,251,249,1) 85%, rgba(0,212,255,0) 100%);
 
   // Estilo del titulo de la página en la que nos encontramos
@@ -51,6 +51,8 @@
   }
 }
 
+// -------------------------
+// Zona de media queries
 
 @media only screen and (max-width: 660px){
   .header{

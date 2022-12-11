@@ -1,0 +1,12 @@
+@use '../utilities/variables' as variable;
+
+// Este archivo se encarga de mostrar la imagen de fondo en todas las pantallas
+
+body {
+  background-color: var(--primary-color);
+  background-image: url('/src/assets/images/wave.png');
+  background-repeat: no-repeat;
+  background-position: top 130px center;
+  background-size: 100% auto;
+  background-attachment: fixed;
+}

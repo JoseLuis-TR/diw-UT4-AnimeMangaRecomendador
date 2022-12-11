@@ -1,9 +1,11 @@
 // Archivo principal donde se acogen todos los archivos scss que se han creado
 
 @import 'base/reset';
+//@import 'base/background-cambioColor'
 @import 'base/background';
 
 @import 'layout/header';
+//@import 'layout/header-cambioColor'
 @import 'layout/contenedorResultados';
 @import 'layout/menu';
 @import 'layout/formularioGenerico';
@@ -11,11 +13,14 @@
 @import 'utilities/variables';
 
 @import 'components/busqueda';
+//@import 'components/busqueda-cambioColor';
 @import 'components/cajaResultados';
 @import 'components/redesSociales';
 @import 'components/producto';
+@import 'components/_cambioModo.sass';
 
 @import 'views/index';
+//@import 'views/index-cambioColor';
 @import 'views/searchResult';
 @import 'views/404';
 @import 'views/myList';

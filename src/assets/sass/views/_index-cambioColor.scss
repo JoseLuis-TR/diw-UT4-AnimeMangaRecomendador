@@ -37,7 +37,7 @@
     display: block;
     width: 145px;
     height: 75px;
-    background-color: variable.$primary-color-toogle-background;
+    background-color: var(--switch-background);
     border-radius: 100px;
     position: relative;
     cursor: pointer;
@@ -49,7 +49,7 @@
     content: "";
     width: 60px;
     height: 60px;
-    background-color: variable.$secondary-color;
+    background-color: var(--secondary-color);
     background-image: url("/src/assets/images/television-w.png");
     background-repeat: no-repeat;
     background-position: center;

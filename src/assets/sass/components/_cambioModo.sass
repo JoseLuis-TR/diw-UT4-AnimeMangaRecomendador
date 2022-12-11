@@ -1,0 +1,76 @@
+// Archivo usado para el funcionamiento del modo claro y oscuro de la página de inicio
+
+
+[tema="light"]
+    --primary-color: #00E9DF
+    --secondary-color: #006662
+    --text: #000
+    --boxes-color: #D2D8DE
+    --button-color: #E2007F
+    --button-color-darker: #8d004f
+    --switch-background: #00b3ad
+
+[tema="dark"]
+    --primary-color: #007a74
+    --secondary-color: #002c2b
+    --text: #383838
+    --boxes-color: #909499
+    --button-color: #9b0058
+    --button-color-darker: #580032
+    --switch-background: #00E9DF
+    
+
+//Botón de cambio de tema
+.chooserModo
+  margin-bottom: 20px
+  display: flex
+  flex-direction: column
+  align-items: center
+  .chooserModo__titulo
+    font-size: 35px
+    font-weight: 600
+    text-align: center
+    margin-top: 30px
+    margin-bottom: 20px
+    transition: 0.5s
+    color: var(--text)
+  
+  .chooserModo__check
+    width: 0
+    height: 0
+    visibility: hidden
+  
+  .chooserModo__label
+    display: block
+    width: 145px
+    height: 75px
+    background-color: var(--switch-background)
+    border-radius: 100px
+    position: relative
+    cursor: pointer
+    transition: 0.5s
+    box-shadow: inset -2px 3px 5px 1px rgb(0,0,0,25%)
+  
+
+  .chooserModo__label::after
+    content: ""
+    width: 60px
+    height: 60px
+    background-color: var(--secondary-color)
+    background-image: url("/src/assets/images/sol-ww.png")
+    background-repeat: no-repeat
+    background-position: center
+    background-size: 41px auto
+    position: absolute
+    border-radius: 70px
+    top: 8px
+    left: 10px
+    transition: 0.7s ease all
+  
+
+  .chooserModo__check:checked + .chooserModo__label:after 
+    background-image: url("/src/assets/images/luna-ww.png")
+    transition: 0.7s ease all
+    left: calc(100% - 10px)
+    transform: translateX(-100%)
+  

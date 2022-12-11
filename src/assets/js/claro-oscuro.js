@@ -1,26 +1,19 @@
-const CHECK_MODO = document.getElementById('checkModo');
+const CHECK_MODO = document.getElementById('checkboxModo');
 
 if(CHECK_MODO.checked){
-    TITULO_PAG.innerHTML = "¿Qué deseas leer hoy?";
-    TITULO_CHOOSER.innerHTML = "Manga";
-    TITULO_PAG.classList.add('muestra');
+    document.documentElement.setAttribute('tema','dark')
+    console.log("prueba-luz")
   } else {
-    TITULO_PAG.innerHTML = "¿Qué deseas ver hoy?";
-    TITULO_CHOOSER.innerHTML = "Anime";
-    TITULO_PAG.classList.add('muestra');
+    document.documentElement.setAttribute('tema','light')
+    console.log("prueba-oscuridad")
   }
-  CHECK_MODO.addEventListener('change',function (){
-    TITULO_PAG.style.transition = "opacity 0.5s linear 0s";
-    TITULO_PAG.style.opacity = 0;
-    if(CHECK_MODO.checked){
-      TITULO_PAG.style.transition = "opacity 0.5s linear 0s";
-      TITULO_PAG.style.opacity = 1;
-      TITULO_PAG.innerHTML = "¿Qué deseas leer hoy?";
-      TITULO_CHOOSER.innerHTML = "Manga";
-    } else {
-      TITULO_PAG.style.transition = "opacity 0.5s linear 0s";
-      TITULO_PAG.style.opacity = 1;
-      TITULO_PAG.textContent = "¿Qué deseas ver hoy?";
-      TITULO_CHOOSER.innerHTML = "Anime";
-    }
-  })
+
+CHECK_MODO.addEventListener('change',function (){
+  if(CHECK_MODO.checked){
+    console.log("prueba-luz")
+    document.documentElement.setAttribute('tema','dark')
+  } else {
+    console.log("prueba-oscuridad")
+    document.documentElement.setAttribute('tema','light')
+  }
+})
