@@ -1,6 +1,9 @@
 @use '../utilities/variables' as variable;
 
+// Archivo que da estilo a la página de error
 
+// Estilo del contenedor que pone en buena posición al contenedor que
+// tiene los mensajes (no la mejor manera probablemente)
 .contenedorError{
   height: 50vh;
   display: flex;
@@ -8,6 +11,7 @@
   justify-content: center;
   text-align: center;
 
+  // Estilo del contenedor del error 404
   .contenedorError__mensaje{
     height: fit-content;
     max-height: 90%;
@@ -22,6 +26,8 @@
     box-shadow: 6px 6px 12px 1px;
     transition: 0.5s;
 
+    // Estilo del titulo que se encuentra dentro del contenedor de error
+    // No confundir con titulo de la pagina
     .contenedorError__mensaje--titulo{
       width: 90%;
       padding: 5px;
@@ -32,6 +38,7 @@
       transition: 0.5s;
     }
 
+    // Estilo del mensaje que da más información sobre el error
     .contenedorError__mensaje--descripcion{
       max-width: 80%;
       padding: 5px;
@@ -51,6 +58,9 @@
     }
   }
 
+  // Aqui es donde se realiza la animación  
+
+  // Estilo del gif de la chica alta
   .contenedorError__gif1 {
     height: 30%;
     width: max-content;
@@ -62,6 +72,7 @@
     animation-duration: 20s;
   }
 
+  // Estilo del gif de la chica baja
   .contenedorError__gif2 {
     height: 20%;
     width: max-content;
@@ -73,6 +84,7 @@
     animation-duration: 5s;
   }
 
+  // Animación de la chica alta
   @keyframes andar {
     0% {
       left: -35%;
@@ -94,6 +106,7 @@
     }
   }
 
+  // Animación de la chica baja
   @keyframes andar2 {
     0% {
       left: -35%;
@@ -115,6 +128,9 @@
     }
   }
 }
+
+// -------------------------
+// Zona de media queries
 
 @media only screen and (max-width: 680px){
   .contenedorError{

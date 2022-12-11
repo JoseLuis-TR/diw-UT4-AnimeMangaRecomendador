@@ -1,17 +1,26 @@
 @use '../utilities/variables' as variable;
 
+// Archivo que da estilo a la página de login, principalmente al checkbox y la linea
+// horizontal que separa el formulario de las redes sociales (lo cual usa también el registro)
+
 .contenedorGenerico{
     &__formulario{
+
+        // Estilo del contenedor del checkbox
         &--recordar{
             width: 100%;
             display: flex;
             justify-content: center;
             gap: 10px;
             margin: 5px 0 15px;
+
+            //Estilo del checkbox
             &--checkbox{
                 width: 15px;
                 transition: 0.5s;
             }
+
+            //Estilo del texto que acompaña al checkbox
             &--texto{
                 font-size: 15px;
                 transition: 0.5s;
@@ -19,6 +28,9 @@
             }
         }
     }
+
+    // Estilo de la linea con la o en medio que se ve tanto en el login
+    // como en el registro
     &__letra{
         width: 90%;
         text-align: center;
@@ -31,6 +43,9 @@
         }
     }
 }
+
+// -------------------------
+// Zona de media queries
 
 @media only screen and (max-width: 450px){
     .contenedorGenerico{

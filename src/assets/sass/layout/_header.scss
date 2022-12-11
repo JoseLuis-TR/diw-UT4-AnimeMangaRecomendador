@@ -1,5 +1,9 @@
 @use '../utilities/variables' as variable;
 
+// Archivo que da estilo al header que se encuentra presente en todas las
+// paginas de la web
+
+// Estilo del contenedor
 .header {
   position: sticky;
   top: 0;
@@ -16,6 +20,7 @@
   background: rgb(204,251,249);
   background: linear-gradient(180deg, rgba(204,251,249,1) 85%, rgba(0,212,255,0) 100%);
 
+  // Estilo del titulo de la página en la que nos encontramos
   .header__titulo{
     grid-area: titulo;
     font-weight: bold;
@@ -25,6 +30,7 @@
     transition: 0.5s;
   }
 
+  // Estilo del logo
   .header__logo{
     display: flex;
     margin: auto;
@@ -36,6 +42,7 @@
     }
   }
 
+  // Estilo del menu
   .header__menu{
     grid-area: menu;
     margin: auto;
@@ -43,6 +50,9 @@
     transition: 0.5s;
   }
 }
+
+// -------------------------
+// Zona de media queries
 
 @media only screen and (max-width: 660px){
   .header{

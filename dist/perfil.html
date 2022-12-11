@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <title>AMR</title>
+        <title>AMR - Perfil</title>
         <link rel="stylesheet" href="/index.034b6250.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Urbanist">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0">    </head>
@@ -17,9 +17,9 @@
             <nav class="menu" id="menu__opciones">
                 <i class="menu__close material-symbols-rounded" onclick="cerrarMenu()">Close</i>
                 <div class="menu__perfil perfil">
-                    <a href="/404.html" class="menu__perfil__enlace">
+                    <a href="/perfil.html" class="menu__perfil__enlace">
                         <img class="menu__perfil__enlace--pfp" src="/pfp.94510423.jpg">
-                        <p>Usuario</p>
+                        <p>JoseLuis-TR</p>
                     </a>
                 </div>
                 <a class="menu__enlace login" href="/login.html">
@@ -44,19 +44,40 @@
                 </a>
             </nav>
         <main class="contenedorCentro">
-            <article class="contenedorGenerico">
-                <p class="contenedorGenerico__mensaje">Utilice este formulario para hacernos llegar cualquier comentario o pregunta que tenga sobre la web o su funcionamiento.</p>
-                <form class="contenedorGenerico__formulario" action="index.html">
-                    <label class="contenedorGenerico__formulario--label" for="nombre">Nombre</label>
-                    <input class="contenedorGenerico__formulario--input" type="text" name="nombre" id="nombre" placeholder="Nombre">
-                    <label class="contenedorGenerico__formulario--label" for="email">Email</label>
-                    <input class="contenedorGenerico__formulario--input" type="text" name="email" id="email" placeholder="E-mail">
-                    <label class="contenedorGenerico__formulario--label" for="asunto">Asunto</label>
-                    <input class="contenedorGenerico__formulario--input" type="text" name="asunto" id="asunto" placeholder="Asunto">
-                    <label class="contenedorGenerico__formulario--label" for="mensaje">Mensaje a enviar</label>
-                    <textarea class="contenedorGenerico__formulario--textArea" name="mensaje" id="mensaje" placeholder="Escriba su mensaje aquí"></textarea>
-                    <input class="contenedorGenerico__formulario--submit" type="submit" value="Enviar">
-                </form>
+            <article class="contenedorPerfil">
+                <section class="contenedorPerfil__infoUsuario">
+                    <img src="/pfp.94510423.jpg" alt="Foto de perfil" class="contenedorPerfil__infoUsuario--foto">
+                    <p class="contenedorPerfil__infoUsuario--nombreUsuario">JoseLuis-TR</p>
+                    <div class="contenedorPerfil__infoUsuario--guardadas">
+                        <p class="contenedorPerfil__infoUsuario--guardadas--titulo">Series guardadas</p>
+                        <p class="contenedorPerfil__infoUsuario--guardadas--numero">8</p>
+                    </div>
+                </section>
+                <span class="contenedorPerfil__lineaVertical"></span>
+                <section class="contenedorPerfil__modificarDatos">
+                    <form class="contenedorPerfil__modificarDatos__formulario">
+                        <label class="contenedorPerfil__modificarDatos__formulario--label" for="usuario">Usuario</label>
+                        <input class="contenedorPerfil__modificarDatos__formulario--input" type="text" name="usuario" id="usuario" value="JoseLuis-TR">
+                        <label class="contenedorPerfil__modificarDatos__formulario--label" for="email">E-mail</label>
+                        <input class="contenedorPerfil__modificarDatos__formulario--input" type="email" name="email" id="email" value="josetocroj094@g.educaand.es">
+                        <label class="contenedorPerfil__modificarDatos__formulario--label" for="pass">Contraseña</label>
+                        <input class="contenedorPerfil__modificarDatos__formulario--input" type="password" name="pass" id="pass" value="123456">
+                        <label class="contenedorPerfil__modificarDatos__formulario--label" for="pronombre">Pronombre</label>
+                        <select id="pronombre" class="contenedorPerfil__modificarDatos__formulario--select">
+                            <option value="masculino" selected="">Masculino [el/ellos]</option>
+                            <option value="femenio">Femenino [ella/ellas]</option>
+                            <option value="neutro">Neutro [elle/elles]</option>
+                        </select>
+                        <label class="contenedorPerfil__modificarDatos__formulario--label" for="genero">Genero</label>
+                        <select id="genero" class="contenedorPerfil__modificarDatos__formulario--select">
+                            <option value="masculino" selected="">Hombre</option>
+                            <option value="femenio">Mujer</option>
+                            <option value="neutro">Otro</option>
+                            <option value="neutro">Prefiero no decirlo</option>
+                        </select>
+                        <input class="contenedorPerfil__modificarDatos__formulario--submit" type="submit" value="Modificar datos">
+                    </form>
+                </section>
             </article>
         </main>
     <script src="/perfil.73755eb3.js"></script></body>

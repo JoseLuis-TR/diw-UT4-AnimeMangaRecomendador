@@ -1,14 +1,12 @@
 @use '../utilities/variables' as variable;
 
-a {
-  text-decoration: none;
-  color: black;
-}
+// Archivo que da estilo al menu de navegacion de la web
 
 .header__menu{
   cursor: pointer;
 }
 
+// Estilo del contenedor, usando grid para mayor facilidad
 .menu{
   z-index: 10;
   height: 300px;
@@ -32,7 +30,7 @@ a {
     "login login login registro registro registro"
     "inicio inicio lista lista contacto contacto";
 
-  
+    // Estilo del contenedor que muestra foto de perfil y nombre de usuario
   .menu__perfil {
     margin: 0;
       width: 100%;
@@ -43,6 +41,7 @@ a {
       font-weight: bold;
       border-bottom: rgba(0,0,0,0.1) solid 1px;
 
+      // Estilo del enlace para poder ver el perfil de usuario
     .menu__perfil__enlace{
       display: flex;
       flex-direction: column;
@@ -52,6 +51,7 @@ a {
       max-width: 200px;
       font-size: 25px;
 
+      // Estilo de la imagen de perfil
       .menu__perfil__enlace--pfp{
         width: 50%;
         border-radius: 50px;
@@ -60,6 +60,7 @@ a {
     }
   }
 
+  // Estilo del resto de enlaces de navegación que se muestran en el menu
   .menu__enlace{
     max-width: 100%;
     width: 70%;
@@ -74,15 +75,18 @@ a {
     background-color: variable.$boxes-color;
     border-radius: 20px;
     margin: 8px auto;
+    box-shadow: variable.$shadow-input;
     &:hover{
       background-color: variable.$boxes-color-darker;
     }
 
+    // Estilo de los iconos usados en el menu
     .material-symbols-rounded{
       font-size: 30px;
     }
   }
 
+  // Estilo del boton de cerrar del menu
   .menu__close{
     position: absolute;
     top: 5%;
@@ -102,6 +106,10 @@ a {
   left: 0;
 }
 
+// De esta manera consigo colocar cada elemento en su sitio en el grid
+// (Se que no es la manera correcta pero no me da tiempo de arreglarlo ahora :_) 
+// en el resto de páginas si lo uso de forma correcta)
+
 .perfil { grid-area: perfil; }
 
 .login { grid-area: login;}
@@ -113,6 +121,9 @@ a {
 .lista { grid-area: lista; }
 
 .contacto { grid-area: contacto; }
+
+// -------------------------
+// Zona de media queries
 
 @media only screen and (max-width: 350px){
   .menu{

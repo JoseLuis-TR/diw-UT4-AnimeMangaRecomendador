@@ -1,5 +1,9 @@
 @use '../utilities/variables' as variable;
 
+// En este archivo damos estilo de forma generica a los elementos que se encuentran
+// tanto en el formulario de registro, login y contacto ya que son muy parecidos
+
+// Estilo del contenedor
 .contenedorGenerico {
     background-color: white;
     width: 80%;
@@ -14,6 +18,9 @@
     align-items: center;
     justify-content: center;
     transition: 0.5s;
+    box-shadow: variable.$shadow-contenedor;
+    
+    // Estilo para un pequeño mensaje en la parte superior usado en Contacto
     .contenedorGenerico__mensaje{
         width: 80%;
         text-align: center;
@@ -21,6 +28,8 @@
         font-size: 20px;
         transition: 0.5s;
     }
+
+    // Estilo al contenedor que alberga los distintos elementos del formulario
     .contenedorGenerico__formulario{
         width: 50%;
         max-width: 340px;
@@ -30,6 +39,8 @@
         align-items: center;
         margin: 3% 0 5%;
         transition: 0.5s;
+
+        // Estilo para los input de texto
         .contenedorGenerico__formulario--input{
             width: 100%;
             max-width: 260px;
@@ -40,6 +51,7 @@
             margin: 10px 0;
             padding-left: 10px;
             transition: 0.5s;
+            box-shadow: variable.$shadow-input;
             &::placeholder{
                 font-size: 15px;
                 opacity: 0.7;
@@ -48,10 +60,32 @@
                 outline: 1px solid #666666;
             }
         }
+
+        // Estilo para los elementos select
+        .contenedorGenerico__formulario--select{
+            width: 100%;
+            max-width: 260px;
+            height: 30px;
+            border: none;
+            border-radius: 10px;
+            background: variable.$boxes-color;
+            margin: 10px 0;
+            padding-left: 10px;
+            transition: 0.5s;
+            font-size: 15px;
+            box-shadow: variable.$shadow-input;
+            &:focus{
+                outline: 1px solid #666666;
+            }
+        }
+
+        // Estilo para los labels (se esconden para mantener una estetica pero
+        // se mantienen en el documento html por accesibilidad)
         .contenedorGenerico__formulario--label{
             display: none;
         }
 
+        // Estilo para el elemento textArea
         .contenedorGenerico__formulario--textArea{
             width: 100%;
             max-width: 260px;
@@ -64,11 +98,13 @@
             margin: 10px 0 20px 0;
             resize: none;
             transition: 0.5s;
+            box-shadow: variable.$shadow-input;
             &:focus{
                 outline: 1px solid #666666;
             }
         }
 
+        // Estilo para el boton inferior usado para enviar el formulario
         .contenedorGenerico__formulario--submit{
             height: 40px;
             width: 170px;
@@ -84,12 +120,16 @@
             align-items: center;
             justify-content: center;
             cursor: pointer;
+            box-shadow: variable.$shadow-input;
             &:hover{
                 background-color: variable.$button-color-darker;
             }
         }
     }
 }
+
+// -------------------------
+// Zona de media queries
 
 @media only screen and (max-width: 600px){
     .contenedorGenerico {
@@ -119,8 +159,9 @@
         .contenedorGenerico__formulario{
             .contenedorGenerico__formulario--input{
                 width: 150%;
-                &::placeholder{
-                }
+            }
+            .contenedorGenerico__formulario--select{
+                width: 150%;
             }
             .contenedorGenerico__formulario--textArea{
                 height: 100px;

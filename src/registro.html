@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <title>AMR</title>
+        <title>AMR - Registro</title>
         <link rel="stylesheet" href="assets/sass/main.scss">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Urbanist">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />    </head>
@@ -47,6 +47,22 @@
             <article class="contenedorGenerico">
                 <form class="contenedorGenerico__formulario" action="index.html">
                     <label class="contenedorGenerico__formulario--label" for="usuario" >Usuario</label>
+                    <input class="contenedorGenerico__formulario--input" type="text" name="usuario" id="usuario" placeholder="Nombre de usuario">
+                    <label class="contenedorGenerico__formulario--label" for="pronombre" >Pronombres</label>
+                    <select id="pronombre" class="contenedorGenerico__formulario--select" >
+                        <option value="" disabled selected hidden>Escoge tu pronombre</option>
+                        <option value="masculino">Masculino [el/ellos]</option>
+                        <option value="femenio">Femenino [ella/ellas]</option>
+                        <option value="neutro">Neutro [elle/elles]</option>
+                    </select>
+                    <label class="contenedorGenerico__formulario--label" for="genero" >Genero</label>
+                    <select id="genero" class="contenedorGenerico__formulario--select" >
+                        <option value="" disabled selected hidden>Escoge tu genero</option>
+                        <option value="masculino">Hombre</option>
+                        <option value="femenio">Mujer</option>
+                        <option value="neutro">Otro</option>
+                        <option value="neutro">Prefiero no decirlo</option>
+                    </select>
                     <input class="contenedorGenerico__formulario--input" type="text" name="usuario" id="usuario" placeholder="Nombre de usuario">
                     <label class="contenedorGenerico__formulario--label" for="email" >Email</label>
                     <input class="contenedorGenerico__formulario--input" type="email" name="email" id="email" placeholder="E-mail">

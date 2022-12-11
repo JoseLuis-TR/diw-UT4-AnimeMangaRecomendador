@@ -1,6 +1,12 @@
 @use '../utilities/variables' as variable;
 
+// Se encarga de dar estilo al contenedor y todos los elementos del producto cuando una serie
+// es seleccionada
+
 .contenedorCentro{
+
+  // Damos estilo al contenedor que acoge todos los elementos que queremos
+  // mostrar de la serie
   .contenedorSerie{
     width: 80%;
     min-width: 330px;
@@ -17,7 +23,9 @@
       "imagen extra"
       "imagen footer";
       transition: 0.5s;
+    box-shadow: variable.$shadow-contenedor;
 
+    // Estilo al contenedor que contiene el poster
     &__poster{
       grid-area: imagen;
       height: 650px;
@@ -29,6 +37,8 @@
       }
     }
 
+    // Estilo al contenedor que tiene el titulo de la serie, cuantos capitulos
+    // tiene y año de estreno
     &__info{
       grid-area: info;
       height: 120px;
@@ -56,6 +66,7 @@
       }
     }
 
+    // Da estilo al contenedor que lleva dentro la sinopsis de la serie que ha sido escogida
     &__sinopsis{
       grid-area: sinopsis;
       height: 350px;
@@ -71,6 +82,9 @@
       }
     }
 
+    // Da estilo a la información referente a la propia api sobre la serie, donde nos encontramos
+    // la nota media y una imagen representativa de la misma además de un boton enlace a la web de
+    // la api
     &__extra{
       grid-area: extra;
       display: flex;
@@ -101,6 +115,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        box-shadow: variable.$shadow-input;
         &--imagen{
           width: 40px;
         }
@@ -112,6 +127,9 @@
       }
     }
 
+
+  // Estilo del footer del contenedor que acoge la información sobre los generos de la serie
+  // además del boton para añadir o eliminar de la lista el producto
     &__footer{
       grid-area: footer;
       width: 100%;
@@ -140,6 +158,7 @@
         }
       }
 
+      // Codigo que se encarga del boton de añadir serie a la lista
       .contenedorSerie__footer--checkbox{
         display: flex;
         align-items: center;
@@ -157,6 +176,7 @@
           border-radius: 50px;
           position: relative;
           cursor: pointer;
+          box-shadow: variable.$shadow-input;
         }
         .contenedorSerie__footer--checkbox--label::after{
           content: "";
@@ -176,6 +196,9 @@
     }
   }
 }
+
+// -------------------------
+// Zona de media queries
 
 @media only screen and (max-width: 1000px){
   .contenedorCentro{

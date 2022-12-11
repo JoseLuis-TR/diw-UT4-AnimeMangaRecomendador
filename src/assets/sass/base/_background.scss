@@ -1,5 +1,7 @@
 @use '../utilities/variables' as variable;
 
+// Este archivo se encarga de mostrar la imagen de fondo en todas las pantallas
+
 body {
   background-color: variable.$primary-color;
   background-image: url('/src/assets/images/wave.png');

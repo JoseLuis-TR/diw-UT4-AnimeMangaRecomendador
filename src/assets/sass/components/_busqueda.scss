@@ -1,11 +1,18 @@
 @use '../utilities/variables' as variable;
 
+// Archivo donde nos encontramos el componente de busqueda usado en varias
+// paginas, que esta formado por uno o varios elementos select con sus correspondientes
+// labels y un boton de busqueda
+
+
+// Mantenemos centrado el componente
 .centro {
     display: flex;
     flex-flow: column;
     align-items: center;
     width: 90%;
 
+    // Se encarga de darle estilo al boton rosa que funciona como submit en la parte inferior
     .centro__inputBusqueda{
         height: 40px;
         width: 170px;
@@ -19,12 +26,14 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        box-shadow: variable.$shadow-input;
         &:hover{
             background-color: variable.$button-color-darker;
         }
     }
 }
 
+// Se encarga de colocar en posición los distintos select puestos en pantalla
 .centro__busqueda {
     display: flex;
     justify-content: space-evenly;
@@ -34,6 +43,7 @@
     margin-bottom: 20px;
     
 
+    // Se le da estilo a los elementos select y label como un único componente
     .centro__busqueda--opcion {
         border: 0;
         display: flex;
@@ -63,9 +73,13 @@
             padding-left: 15px;
             transition: 0.5s;
             cursor: pointer;
+            box-shadow: variable.$shadow-input;
         }
     }
 }
+
+// -------------------------
+// Zona de media queries
 
 @media only screen and (max-width: 550px){
     .centro__busqueda{
