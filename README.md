@@ -61,6 +61,7 @@ copia, por ejemplo:
 ## Poner en funcionamiento el proyecto
 
 ```bash
+npm install
 npm run start
 ```
 
